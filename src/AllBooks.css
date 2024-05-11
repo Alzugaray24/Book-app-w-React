@@ -1,0 +1,120 @@
+.flexBooks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aviableBooks-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: 50px;
+}
+
+.flexPages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scrollable-input {
+  width: 150px; /* Ancho del input */
+  padding: 10px; /* Espaciado interno del input */
+  font-size: 16px; /* Tamaño de fuente */
+  border: 2px solid #ccc; /* Borde del input */
+  border-radius: 5px; /* Borde redondeado */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: border-color 0.3s ease; /* Transición suave para el color del borde */
+}
+
+.scrollable-input:focus {
+  outline: none; /* Eliminar el contorno de enfoque */
+  border-color: #007bff; /* Cambiar el color del borde al enfocar el input */
+}
+
+.select2 {
+  margin-left: 10px;
+}
+
+.selectClass {
+  width: 180px; /* Ancho del select */
+  padding: 10px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de fuente */
+  border: 2px solid #ccc; /* Borde */
+  border-radius: 5px; /* Borde redondeado */
+  background-color: #fff; /* Fondo */
+  appearance: none; /* Elimina los estilos predeterminados */
+  outline: none; /* Elimina el contorno de enfoque */
+  cursor: pointer; /* Cursor al pasar por encima */
+}
+
+.selectClass:hover {
+  border-color: #007bff; /* Color del borde al pasar el ratón por encima */
+}
+
+.selectClass:focus {
+  border-color: #007bff; /* Color del borde al enfocar */
+}
+
+.ul-books {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  list-style: none;
+}
+
+.li-books {
+  position: relative;
+}
+
+.img-books {
+  max-width: 100%;
+  height: 150px;
+}
+
+.button-add-lectura {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.li-books:hover .button-add-lectura {
+  opacity: 1;
+}
+
+.lectureBooks-container {
+  margin-left: 15px;
+  border-radius: 10px;
+  background-color: #12171b;
+  border: solid 2px white;
+}
+
+.ul-books-lecutre {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+  .flexBooks {
+    flex-direction: column;
+  }
+
+  .ul-books,
+  .ul-books-lecutre {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .img-books {
+    height: auto;
+  }
+}
